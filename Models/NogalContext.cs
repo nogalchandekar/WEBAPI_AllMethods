@@ -26,76 +26,76 @@ namespace WEB_API3.Models
             }
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<TblPerson>(entity =>
-            {
-                entity.HasKey(e => e.RollNo)
-                    .HasName("PK__tbl_Peop__28B6684DBACA1C9C");
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<TblPerson>(entity =>
+        //    {
+        //        entity.HasKey(e => e.RollNo)
+        //            .HasName("PK__tbl_Peop__28B6684DBACA1C9C");
 
-                entity.ToTable("tbl_People");
+        //        entity.ToTable("tbl_People");
 
-                entity.Property(e => e.RollNo).HasColumnName("Roll_NO");
+        //        entity.Property(e => e.RollNo).HasColumnName("Roll_NO");
 
-                entity.Property(e => e.Department)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+        //        entity.Property(e => e.Department)
+        //            .HasMaxLength(50)
+        //            .IsUnicode(false);
 
-                entity.Property(e => e.Fees).HasColumnType("decimal(18, 0)");
+        //        entity.Property(e => e.Fees).HasColumnType("decimal(18, 0)");
 
-                entity.Property(e => e.FirstName)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("First_Name");
+        //        entity.Property(e => e.FirstName)
+        //            .HasMaxLength(50)
+        //            .IsUnicode(false)
+        //            .HasColumnName("First_Name");
 
-                entity.Property(e => e.Gender)
-                    .HasMaxLength(40)
-                    .IsUnicode(false);
+        //        entity.Property(e => e.Gender)
+        //            .HasMaxLength(40)
+        //            .IsUnicode(false);
 
-                entity.Property(e => e.LastName)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("Last_Name");
+        //        entity.Property(e => e.LastName)
+        //            .HasMaxLength(50)
+        //            .IsUnicode(false)
+        //            .HasColumnName("Last_Name");
 
-                entity.Property(e => e.Status)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-            });
+        //        entity.Property(e => e.Status)
+        //            .HasMaxLength(50)
+        //            .IsUnicode(false);
+        //    });
 
-            modelBuilder.Entity<TblStudent>(entity =>
-            {
-                entity.ToTable("tbl_Student");
+        //    modelBuilder.Entity<TblStudent>(entity =>
+        //    {
+        //        entity.ToTable("tbl_Student");
 
-                entity.Property(e => e.Id).HasColumnName("ID");
+        //        entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.Department)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+        //        entity.Property(e => e.Department)
+        //            .HasMaxLength(50)
+        //            .IsUnicode(false);
 
-                entity.Property(e => e.Email)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+        //        entity.Property(e => e.Email)
+        //            .HasMaxLength(50)
+        //            .IsUnicode(false);
 
-                entity.Property(e => e.FirstName)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+        //        entity.Property(e => e.FirstName)
+        //            .HasMaxLength(50)
+        //            .IsUnicode(false);
 
-                entity.Property(e => e.Gender)
-                    .HasMaxLength(30)
-                    .IsUnicode(false);
+        //        entity.Property(e => e.Gender)
+        //            .HasMaxLength(30)
+        //            .IsUnicode(false);
 
-                entity.Property(e => e.LastName)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+        //        entity.Property(e => e.LastName)
+        //            .HasMaxLength(50)
+        //            .IsUnicode(false);
 
-                entity.Property(e => e.Password)
-                    .HasMaxLength(60)
-                    .IsUnicode(false);
-            });
+        //        entity.Property(e => e.Password)
+        //            .HasMaxLength(60)
+        //            .IsUnicode(false);
+        //    });
 
-            OnModelCreatingPartial(modelBuilder);
-        }
+        //    OnModelCreatingPartial(modelBuilder);
+        //}
 
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+       // partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
